@@ -1,8 +1,10 @@
-# Install Ruby 1.9.3
+# Install some gems dependencies
 execute 'apt-get update'
-package 'ruby1.9.3'
+%w(build-essential libxslt-dev libxml2-dev).each do |p|
+  package p
+end
 
-# Install gems
+# Install bundler
 %w(bundler).each do |gem|
   gem_package gem
 end
