@@ -1,0 +1,16 @@
+---
+pid: tmp/thin.pid
+log: log/thin.log
+timeout: 30
+port: 3000
+max_conns: 1024
+rackup: config.ru
+max_persistent_conns: 512
+environment: production
+address: 0.0.0.0
+daemonize: true
+
+
+# thin -C thin-production.yml -R config.ru start
+# thin -C thin-production.yml -R config.ru stop
+# thin -C thin-production.yml -R config.ru restart

@@ -1,5 +1,6 @@
 # Install gdebi
 # It is used instead of dpkg because Graphviz has a lot of dependencies
+execute 'apt-get update'
 package 'gdebi-core'
 
 # Install Graphviz Library
